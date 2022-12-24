@@ -1,0 +1,5 @@
+ ~~ Atistirmalik Tutari : 0 TL
+ ~~ Icecek Tutari : 0 TL
+ ~~ Bilet Tutari : 150 TL 
+KDV Oraný : 27
+Toplam Ödenecek Tutar : 177 TL 
