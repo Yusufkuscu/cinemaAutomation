@@ -7,7 +7,7 @@
 #include <Windows.h>
 using namespace std;
 
-void yükleniyor() {
+void yukleniyor() {
 
 	system("CLS");
 	for (int i = 0; i < 15; i++)
@@ -64,7 +64,7 @@ public:
 	static void showInfos(Film filmbilgi) {
 		cout << endl;
 		cout << " -----------------------------" << endl;
-		cout << "<<< VÝZYONDAKÝ FÝLMLER >>>" << endl;
+		cout << "<<< VÃZYONDAKÃ FÃLMLER >>>" << endl;
 		cout << " -----------------------------" << endl;
 		cout << filmbilgi.film1 << endl;
 		cout << filmbilgi.film2 << endl;
@@ -96,7 +96,7 @@ public:
 class Yazdir2 {
 public:
 	static void showInf(UcretSaat ucretBilgi) {
-		cout << "<<< BÝLET FÝYAT LÝSTESÝ>>>" << endl;
+		cout << "<<< BÃLET FÃYAT LÃSTESÃ>>>" << endl;
 		cout << " -----------------------------------------------------------------" << endl;
 		cout << "   1 ->\t PREDESTINATION  - \t " << ucretBilgi.ucretfilm << " TL" << endl;
 		cout << "   2 ->\t AVATAR 2: \t - \t " << ucretBilgi.ucretfilm << " TL" << endl;
@@ -137,14 +137,14 @@ public:
 	}
 
 	void koltukSay() {
-		cout << "Toplam Koltuk Sayýsý : " << toplamBiletSayisi << endl;
+		cout << "Toplam Koltuk SayÃ½sÃ½ : " << toplamBiletSayisi << endl;
 		int bosBiletSayisi = toplamBiletSayisi - biletSayisi;
-		cout << "Dolu Koltuk Sayýsý : " << biletSayisi << endl;
-		cout << "Boþ Koltuk Sayýsý: " << bosBiletSayisi << endl;
+		cout << "Dolu Koltuk SayÃ½sÃ½ : " << biletSayisi << endl;
+		cout << "BoÃ¾ Koltuk SayÃ½sÃ½: " << bosBiletSayisi << endl;
 	};
 
 
-	void biletSatýnAl(int koltukNo, string adSoyad) {
+	void biletSatÃ½nAl(int koltukNo, string adSoyad) {
 		if (koltukNo <= toplamBiletSayisi) {
 			if (bilet[koltukNo - 1] == "") {
 				bilet[koltukNo - 1] = adSoyad;
@@ -155,15 +155,15 @@ public:
 			}
 		}
 		else {
-			cout << toplamBiletSayisi << " Koltuk Bulunmaktadýr..." << endl;
+			cout << toplamBiletSayisi << " Koltuk BulunmaktadÃ½r..." << endl;
 		}
 
 	}
 
-	void biletSatým() {
+	void biletSatÃ½m() {
 
 		cout << endl;
-		Film film(" 1 -)PREDESTINATION", " 2 -)AVATAR 2", " 3 -)THE BATMAN", "ÝYÝ SEYÝRLER DÝLERÝZ!!!");
+		Film film(" 1 -)PREDESTINATION", " 2 -)AVATAR 2", " 3 -)THE BATMAN", "ÃYÃ SEYÃRLER DÃLERÃZ!!!");
 
 
 		UcretSaat ucret(50, 19.30);
@@ -176,7 +176,7 @@ public:
 		int filmsec;
 		do {
 
-			cout << " Film Seçiniz -> : " << endl;
+			cout << " Film SeÃ§iniz -> : " << endl;
 			cin >> filmsec;
 
 
@@ -184,21 +184,21 @@ public:
 
 
 		double saat;
-		cout << "Saat Seçiniz :  " << endl;
+		cout << "Saat SeÃ§iniz :  " << endl;
 		cin >> saat;
 
 
 		while (saat < 7 || saat > 24) {
 
-			cout << "O saatlerde seansýmýz yoktur ..." << endl;
-			cout << "Lütfen Geçerli Saat Giriniz : " << endl;
+			cout << "O saatlerde seansÃ½mÃ½z yoktur ..." << endl;
+			cout << "LÃ¼tfen GeÃ§erli Saat Giriniz : " << endl;
 			cin >> saat;
 
 		}
 
 		int kapasite = 20;
 		do {
-			cout << " ~~ Kaç Bilet Almak Ýstiyorsunuz :  ";
+			cout << " ~~ KaÃ§ Bilet Almak Ãstiyorsunuz :  ";
 			cin >> al;
 
 		} while (al >= 21 || al <= 0);
@@ -209,13 +209,13 @@ public:
 
 		Musteri musteri(kapasite, al);
 		cout << endl;
-		cout << "Koltuk Durumlarý " << endl;
-		musteri.biletSatýnAl(1, "DOLU");
-		musteri.biletSatýnAl(13, "DOLU");
-		musteri.biletSatýnAl(7, "DOLU");
-		musteri.biletSatýnAl(9, "DOLU");
-		musteri.biletSatýnAl(15, "DOLU");
-		musteri.biletSatýnAl(4, "DOLU");
+		cout << "Koltuk DurumlarÃ½ " << endl;
+		musteri.biletSatÃ½nAl(1, "DOLU");
+		musteri.biletSatÃ½nAl(13, "DOLU");
+		musteri.biletSatÃ½nAl(7, "DOLU");
+		musteri.biletSatÃ½nAl(9, "DOLU");
+		musteri.biletSatÃ½nAl(15, "DOLU");
+		musteri.biletSatÃ½nAl(4, "DOLU");
 
 		musteri.biletListele();
 		musteri.koltukSay();
@@ -225,15 +225,15 @@ public:
 
 			cout << endl;
 			int koltuksec = 1;
-			cout << "Koltuk Seçiniz : ";
+			cout << "Koltuk SeÃ§iniz : ";
 
 
 			cin >> koltuksec;
 			string isimGir;
-			cout << "Ýsim Giriniz: ";
+			cout << "Ãsim Giriniz: ";
 			cin >> isimGir;
 
-			musteri.biletSatýnAl(koltuksec, isimGir);
+			musteri.biletSatÃ½nAl(koltuksec, isimGir);
 
 			cout << endl << endl;
 
@@ -345,7 +345,7 @@ public:
 
 void Popcorn::order() {
 	int n;
-	cout << " ~ Seçim Yapýnýz : " << endl;
+	cout << " ~ SeÃ§im YapÃ½nÃ½z : " << endl;
 	cin >> n;
 	switch (n) {
 	case 1:
@@ -400,7 +400,7 @@ public:
 };
 void Drink::order() {
 	int n;
-	cout << " ~ Seçim Yapýnýz : " << endl;
+	cout << " ~ SeÃ§im YapÃ½nÃ½z : " << endl;
 	cin >> n;
 	switch (n) {
 	case 1:
@@ -422,7 +422,7 @@ void Drink::order() {
 		l.append(price);
 		break;
 	default:
-		cout << " Hatalý Seçim !!!  " << endl;
+		cout << " HatalÃ½ SeÃ§im !!!  " << endl;
 		cin >> n;
 
 	}
@@ -439,7 +439,7 @@ string Drink::deliver() {
 	stringstream ss;
 	ss << price;
 	string str = ss.str();
-	cout << name << " " << str << " TL Sipariþinize Eklendi." << endl;
+	cout << name << " " << str << " TL SipariÃ¾inize Eklendi." << endl;
 	return name + "  " + str + " TL\n";
 }
 
@@ -511,7 +511,7 @@ public:
 	}
 
 
-	void faturaYazdýr(int d_price, int s_price) {
+	void faturaYazdÃ½r(int d_price, int s_price) {
 
 
 		cout << "==========================================================" << endl;
@@ -521,7 +521,7 @@ public:
 		cout << " ~~ \t Atistirmalik Tutari : \t" << s_price << " TL" << endl << endl;
 		cout << " ~~ \t Icecek Tutari : \t" << d_price << " TL" << endl << endl;
 		cout << " ~~ \t Bilet Tutari : \t" << bilet_ucret << " TL " << endl << endl;
-		cout << " ~~ \t KDV Oraný : \t\t" << (s_price + d_price + bilet_ucret) * (kdv_oran)-(s_price + d_price + bilet_ucret) << " TL " << endl << endl;
+		cout << " ~~ \t KDV OranÃ½ : \t\t" << (s_price + d_price + bilet_ucret) * (kdv_oran)-(s_price + d_price + bilet_ucret) << " TL " << endl << endl;
 		cout << " ~~ \t Toplam Tutar : \t" << (s_price + d_price + bilet_ucret) * (kdv_oran) << " TL " << endl << endl;
 		cout << "==========================================================" << endl;
 
@@ -530,8 +530,8 @@ public:
 		fatura << " ~~ Atistirmalik Tutari : " << s_price << " TL" << endl;
 		fatura << " ~~ Icecek Tutari : " << d_price << " TL" << endl;
 		fatura << " ~~ Bilet Tutari : " << bilet_ucret << " TL " << endl;
-		fatura << "KDV Oraný : " << (s_price + d_price + bilet_ucret) * (kdv_oran)-(s_price + d_price + bilet_ucret) << endl;
-		fatura << "Toplam Ödenecek Tutar : " << (s_price + d_price + bilet_ucret) * (kdv_oran) << " TL " << endl;
+		fatura << "KDV OranÃ½ : " << (s_price + d_price + bilet_ucret) * (kdv_oran)-(s_price + d_price + bilet_ucret) << endl;
+		fatura << "Toplam Ã–denecek Tutar : " << (s_price + d_price + bilet_ucret) * (kdv_oran) << " TL " << endl;
 		fatura.close();
 
 
@@ -572,30 +572,30 @@ public:
 	}
 
 	void giris() {
-		yükleniyor();
+		yukleniyor();
 
 		int islem;
 
 		cout << endl << endl;
 		cout << "=============================================" << endl;
-		cout << " 1 - Bilet Satýn Alma Menüsü" << endl;
-		cout << " 2 - Atýþtýrmalýk Satýn Alma Menüsü" << endl;
-		cout << " 3 - Icecek Satýn Alma Menüsü" << endl;
-		cout << " 4 - Hesap Odeme Menüsü " << endl;
+		cout << " 1 - Bilet SatÃ½n Alma MenÃ¼sÃ¼" << endl;
+		cout << " 2 - AtÃ½Ã¾tÃ½rmalÃ½k SatÃ½n Alma MenÃ¼sÃ¼" << endl;
+		cout << " 3 - Icecek SatÃ½n Alma MenÃ¼sÃ¼" << endl;
+		cout << " 4 - Hesap Odeme MenÃ¼sÃ¼ " << endl;
 		cout << "=============================================" << endl;
 
 		cout << "" << endl << endl;
-		cout << " Hangi iþlemi yapmak istersiniz : " << endl;
+		cout << " Hangi iÃ¾lemi yapmak istersiniz : " << endl;
 		cin >> islem;
 
 		switch (islem) {
 		case 1:
-			cout << " Bilet satýn alma menüsüne yönlendiriliyorsunuz ..." << endl;
-			m.biletSatým();
+			cout << " Bilet satÃ½n alma menÃ¼sÃ¼ne yÃ¶nlendiriliyorsunuz ..." << endl;
+			m.biletSatÃ½m();
 			giris();
 			break;
 		case 2:
-			cout << " Atýþtýrmalýk satýn alma menüsüne yönlendiriliyorsunuz ..." << endl << endl;
+			cout << " AtÃ½Ã¾tÃ½rmalÃ½k satÃ½n alma menÃ¼sÃ¼ne yÃ¶nlendiriliyorsunuz ..." << endl << endl;
 			p.list();
 			p.order();
 			p.deliver();
@@ -603,21 +603,21 @@ public:
 
 			break;
 		case 3:
-			cout << " Icecek satýn alma menüsüne yönlendiriliyorsunuz ..." << endl << endl;
+			cout << " Icecek satÃ½n alma menÃ¼sÃ¼ne yÃ¶nlendiriliyorsunuz ..." << endl << endl;
 			d.list();
 			d.order();
 			d.deliver();
 			giris();
 		case 4:
-			cout << " Hesap Odeme menüsüne yönlendiriliyorsunuz ..." << endl;
+			cout << " Hesap Odeme menÃ¼sÃ¼ne yÃ¶nlendiriliyorsunuz ..." << endl;
 			int dprice;
 			dprice = d.printList();
 			int sprice;
 			sprice = p.printList();
-			f.faturaYazdýr(dprice, sprice);
+			f.faturaYazdÃ½r(dprice, sprice);
 			break;
 		default:
-			cout << " Hatalý Giriþ !!! Lütfen Geçerli Bir Sayý Giriniz..." << endl;
+			cout << " HatalÃ½ GiriÃ¾ !!! LÃ¼tfen GeÃ§erli Bir SayÃ½ Giriniz..." << endl;
 
 
 			break;
@@ -629,9 +629,9 @@ public:
 
 
 void puanlama() {
-	cout << " Hizmetimizi Deðerlendirmek Ýster Misiniz ?" << endl;
+	cout << " Hizmetimizi DeÃ°erlendirmek Ãster Misiniz ?" << endl;
 	cout << " 1 - Evet " << endl;
-	cout << " 2 - Hayýr " << endl;
+	cout << " 2 - HayÃ½r " << endl;
 	int cvp;
 	cin >> cvp;
 	int puan;
@@ -639,7 +639,7 @@ void puanlama() {
 
 	if (cvp == 1) {
 
-		cout << " Hizmetimizi Puanlayýn (0 - 5) : ";
+		cout << " Hizmetimizi PuanlayÃ½n (0 - 5) : ";
 		cin >> puan;
 		try {
 			if (puan < 0 || puan > 5) {
@@ -647,11 +647,11 @@ void puanlama() {
 			}
 		}
 		catch (invalid_argument& e) {
-			cout << " Hatalý Girdiniz !!! " << endl;
+			cout << " HatalÃ½ Girdiniz !!! " << endl;
 		}
 	}
 	else {
-		cout << " Hoþçakalýn..." << endl;
+		cout << " HoÃ¾Ã§akalÃ½n..." << endl;
 	}
 
 }
